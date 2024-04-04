@@ -40,5 +40,8 @@ jobs:
       - name: Launch Web Service
         run: docker-compose up -d
 
+      - name: wait for web service
+        run: sh wait.sh
+
       - name: Run Selenium Tests
         run: cd selenium && mvn test
